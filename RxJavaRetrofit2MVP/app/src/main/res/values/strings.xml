@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RxJavaRetrofit2MVP</string>
+    <string name="network_connection_faile">网络连接失败，请检查网络设置</string>
+    <string name="network_connection_time_out">网络连接超时</string>
+    <string name="network_connection_busy">服务器繁忙</string>
+    <string name="network_connection_exception">网络连接异常</string>
+    <string name="common_url_error">访问地址异常,请稍后重试</string>
+    <string name="common_data_exception">数据异常,请稍后重试</string>
+    <string name="common_unknown_error">未知错误,请稍后重试</string>
+</resources>
