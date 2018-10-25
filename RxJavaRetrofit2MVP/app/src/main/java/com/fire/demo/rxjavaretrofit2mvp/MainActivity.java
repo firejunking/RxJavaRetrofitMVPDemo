@@ -1,9 +1,9 @@
-package com.fire.demo.rxjavaretrofit2mvp.ui.activity;
+package com.fire.demo.rxjavaretrofit2mvp;
 
 import android.os.Bundle;
 
 import com.fire.demo.rxjavaretrofit2mvp.R;
-import com.fire.demo.rxjavaretrofit2mvp.ui.base.BaseActivity;
+import com.fire.demo.rxjavaretrofit2mvp.component.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 

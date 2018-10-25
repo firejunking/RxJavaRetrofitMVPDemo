@@ -1,8 +1,6 @@
-package com.fire.demo.rxjavaretrofit2mvp.mvp.base;
+package com.fire.demo.rxjavaretrofit2mvp.component;
 
 import android.os.Bundle;
-
-import com.fire.demo.rxjavaretrofit2mvp.ui.base.BaseActivity;
 
 
 /**

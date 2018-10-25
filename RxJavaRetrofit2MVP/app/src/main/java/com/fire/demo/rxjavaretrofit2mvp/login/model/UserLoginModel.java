@@ -1,9 +1,9 @@
-package com.fire.demo.rxjavaretrofit2mvp.mvp.model;
+package com.fire.demo.rxjavaretrofit2mvp.login.model;
 
 import com.fire.demo.rxjavaretrofit2mvp.bean.UserInfo;
 import com.fire.demo.rxjavaretrofit2mvp.data.util.JsonHandleAdapter;
-import com.fire.demo.rxjavaretrofit2mvp.mvp.model.impl.IUserLoginModel;
-import com.fire.demo.rxjavaretrofit2mvp.mvp.model.listener.OnLoginListener;
+import com.fire.demo.rxjavaretrofit2mvp.login.LoginMvp;
+import com.fire.demo.rxjavaretrofit2mvp.login.listener.OnLoginListener;
 import com.fire.demo.rxjavaretrofit2mvp.net.manager.RetrofitManage;
 import com.fire.demo.rxjavaretrofit2mvp.net.util.ApiCallback;
 import com.fire.demo.rxjavaretrofit2mvp.net.util.SubscriberCallBack;
@@ -20,13 +20,15 @@ import rx.schedulers.Schedulers;
 /**
  * Created by pc on 2016/9/26.
  */
-public class UserLoginModel implements IUserLoginModel {
+public class UserLoginModel implements LoginMvp.IUserLoginModel {
+
     @Override
     public Subscription login(Map<String, String> maps, final OnLoginListener listener) {
         Observable<JSONObject> observable = RetrofitManage.getInstance().getHttpServiceConnection().login(maps);
         return observable.subscribeOn(Schedulers.io())
-                .unsubscribeOn(Schedulers.io()) //在io线程中处理网络请求
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new SubscriberCallBack<>(new ApiCallback<JSONObject>() {
+                .unsubscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new SubscriberCallBack<>(new ApiCallback<JSONObject>() {
                     @Override
                     public void onSuccess(JSONObject model) {
                         UserInfo userInfo = JsonHandleAdapter.getUserLoginInfo(model.toString());

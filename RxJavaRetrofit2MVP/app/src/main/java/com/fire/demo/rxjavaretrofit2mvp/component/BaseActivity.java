@@ -1,4 +1,4 @@
-package com.fire.demo.rxjavaretrofit2mvp.ui.base;
+package com.fire.demo.rxjavaretrofit2mvp.component;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;

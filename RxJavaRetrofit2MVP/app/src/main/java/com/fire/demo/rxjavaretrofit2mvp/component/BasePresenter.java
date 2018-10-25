@@ -1,4 +1,4 @@
-package com.fire.demo.rxjavaretrofit2mvp.mvp.base;
+package com.fire.demo.rxjavaretrofit2mvp.component;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;

@@ -1,4 +1,4 @@
-package com.fire.demo.rxjavaretrofit2mvp.ui.activity;
+package com.fire.demo.rxjavaretrofit2mvp.login.view;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,11 +7,12 @@ import android.support.annotation.Nullable;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.fire.demo.rxjavaretrofit2mvp.MainActivity;
 import com.fire.demo.rxjavaretrofit2mvp.R;
 import com.fire.demo.rxjavaretrofit2mvp.bean.UserInfo;
-import com.fire.demo.rxjavaretrofit2mvp.mvp.base.MvpActivity;
-import com.fire.demo.rxjavaretrofit2mvp.mvp.persenter.UserLoginPresenter;
-import com.fire.demo.rxjavaretrofit2mvp.mvp.view.IUserLoginView;
+import com.fire.demo.rxjavaretrofit2mvp.component.MvpActivity;
+import com.fire.demo.rxjavaretrofit2mvp.login.LoginMvp;
+import com.fire.demo.rxjavaretrofit2mvp.login.presenter.UserLoginPresenter;
 import com.fire.demo.rxjavaretrofit2mvp.widget.DialogUtils;
 
 import java.util.HashMap;
@@ -23,7 +24,7 @@ import butterknife.OnClick;
 /**
  * Created by pc on 2016/9/26.
  */
-public class LoginActivity extends MvpActivity<UserLoginPresenter> implements IUserLoginView {
+public class LoginActivity extends MvpActivity<UserLoginPresenter> implements LoginMvp.IUserLoginView {
     private Context mContext;
     @Bind(R.id.editText_name)
     EditText mEtGwNumber;

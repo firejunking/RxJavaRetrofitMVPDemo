@@ -1,4 +1,4 @@
-package com.fire.demo.rxjavaretrofit2mvp.mvp.base;
+package com.fire.demo.rxjavaretrofit2mvp.component;
 
 /**
  * Created by pc on 2016/8/31.
